@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Sabina.az.AdminPanel.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>Diplom Admin panel</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<style media="all" type="text/css">
+@import "css/all.css";
+</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <div id="main">
+  <div id="header"> <a href="default.aspx" class="logo"><img src="../img/logo.png" width="101" height="29" alt="" /></a>
+    <ul id="top-navigation">
+     
+    </ul>
+  </div>
+  <div id="middle">
+    <div id="left-column">
+      <h3>Главная</h3>
+      <ul class="nav">
+        <li><a href="services.aspx">Сервисы</a></li>
+        <li><a href="welcome.aspx">Текст приветствия</a></li>
+        <li><a href="types.aspx">Типы операций</a></li>
+       
+      
+      </ul>
+      </div>
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+        </div>
+    </div>
+    </form>
+</body>
+</html>

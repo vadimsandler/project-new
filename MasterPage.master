@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+<title>Diplom - Index</title>
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="icon" type="image/png" href="img/favicon.png"/>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet"/>
+<link rel='stylesheet' href='css/font/stm.css?ver=1.4.2' type='text/css' media='all' />
+<link rel='stylesheet' href='css/font/font-awesome.min.css?ver=1.4.2' type='text/css' media='all' />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="main_wrapper">
+
+
+  <!-- HEADER BEGINS -->
+
+    <header id="header">
+      <div class="first">
+        <div>
+          <div class="lang_switcher">
+            <a href="#">
+              <img src="img/en.jpg" alt="">
+              <span>English</span>
+            </a>
+            <div>
+              <a href="#">
+                <img src="img/az.jpg" alt="">
+                <span>Azərbaycan</span>
+              </a>
+              <a href="#">
+                <img src="img/ru.jpg" alt="">
+                <span>Русский</span>
+              </a>
+            </div>
+          </div>
+          <div class="working_time">
+            <span>24/7</span>
+          </div>
+          <div class="header_email">
+            <a href="#">fahri1988@gmail.com</a>
+          </div>
+          <div class="header_phones">
+            <span>(+994) 50 455 95 57</span>
+          </div>
+        </div>        
+      </div>
+      <div class="second">
+        <div>
+          <h1 class="logo"><a href="default.aspx"></a></h1>
+          <nav id="nav">
+            <ul>
+              <li class="active"><a href="default.aspx">Home</a></li>
+              <li>
+                <a href="#">Services</a>
+                <ul>
+                  <%--<li><a href="#">Passenger transfers &amp; Transportation Services</a></li>
+                  <li><a href="#">Fleet Management &amp; Rental</a></li>
+                  <li><a href="#">Logistics</a></li>
+                  <li><a href="#">Provision of Plant Equipment</a></li>
+                  <li><a href="#">Provision of Manpower, operators</a></li>
+                  <li><a href="#">Events management</a></li>
+                  <li><a href="#">Maintenance</a></li>
+                  <li><a href="#">Catering</a></li>--%>
+                  <asp:Literal ID="services_lit" runat="server"></asp:Literal>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Fleet</a>
+                <ul>
+                  <li><a href="#">Sedan</a></li>
+                  <li><a href="#">SUV &amp; Crossovers</a></li>
+                  <li><a href="#">Buses</a></li>
+                  <li><a href="#">Heavy Equipment</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+            <span></span>
+          </nav>
+        </div>
+      </div>
+      <a href="#" class="toggler">
+        <em></em>
+        <em></em>
+        <em></em>
+      </a>
+    </header>
+
+  <!-- HEADER END -->
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  <!-- INDEX SLIDER BEGIN -->
+
+    
+
+  <!-- MODALS END -->
+   <!-- ASIDE BEGIN -->
+
+    <aside id="aside_block">
+      <div>
+        <nav class="mobile_nav">
+          <ul>
+            <li class="active"><a href="default.aspx">Home</a></li>
+            <li class="submenu">
+              <a href="#">Services</a>
+              <ul>
+               <asp:Literal ID="servicesm_lit" runat="server"></asp:Literal>
+              </ul>
+            </li>
+            <li class="submenu">
+              <a href="#">Fleet</a>
+              <ul>
+                <li><a href="#">Sedan</a></li>
+                <li><a href="#">SUV &amp; Crossovers</a></li>
+                <li><a href="#">Buses</a></li>
+                <li><a href="#">Heavy Equipment</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="social_icons">
+            <a href="#"><img src="img/facebook_icon.svg" alt=""></a>
+            <a href="#"><img src="img/skype_icon.svg" alt=""></a>
+            <a href="#"><img src="img/telegram_icon.svg" alt=""></a>
+            <a href="#"><img src="img/twitter_icon.svg" alt=""></a>
+            <a href="#"><img src="img/youtube_icon.svg" alt=""></a>
+        </div>
+        <div class="lang">
+          <select name="" id="">
+            <option value="aze">AZE</option>
+            <option value="aze">ENG</option>
+            <option value="aze">RUS</option>
+          </select>
+        </div>
+        <div class="footer_search">
+          <div class="form">
+            <form action="simple.php">
+              <input type="text" placeholder="Search...">
+              <button type="submit"></button>
+            </form>            
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  <!-- ASIDE END -->
+
+
+  <!-- MODALS BEGIN -->
+
+    <div class="darkness"></div>
+  
+    <div class="modal_sign">
+    </div>
+
+
+
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+      
+  
+    </form>
+</body>
+</html>
